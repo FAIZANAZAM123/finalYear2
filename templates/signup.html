@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Poultry Vision </title>
+    <link href="//fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/style-starter.css') }}">
+
+    <style>
+        .Signupform {
+            margin-top: 40px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="site-header" class="fixed-top nav-fixed">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand" href="/home">
+                        <span class="w3yellow">Poultry</span> Vision
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">SignUp</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="w3l-contact-10 py-5 mt-5 Signupform" id="contact">
+        <div class="form-41-mian pt-md-5 pt-3">
+            <div class="container">
+                <div class="row contacts-5-grid-main mb-5">
+
+
+                    <div class="col-lg-6 mx-auto form-inner-cont mt-lg-0 mt-4">
+
+                        <h3 class="title-w3l mb-3 mx-auto d-block">SignUp Here</h3>
+
+                        <form id="signupForm" action="" method="post" class="signin-form">
+                            <div class="form-grids">
+                                <div class="form-input">
+                                    <input type="text" name="name" id="name" placeholder="Enter your name *" required />
+                                </div>
+                                <div class="form-input">
+                                    <input type="email" name="email" id="email" placeholder="Enter email *" required />
+                                </div>
+                                <div class="form-input">
+                                    <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number *" required maxlength="11" pattern="\d{11,}" />
+                                </div>
+                                <div class="form-input">
+                                    <input type="text" name="cnic" id="cnic" placeholder="Enter CNIC *" required maxlength="15" pattern="\d{5}-\d{7}-\d{1}" title="CNIC must be in the format 12345-1234567-1" />
+                                </div>
+                                <div class="form-input">
+                                    <input type="password" name="password" id="password" placeholder="Enter Password *" required  minlength="6" pattern="\d{6,}"  />
+                                </div>
+                                <div class="form-input mb-3">
+                                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Your Password *" required  minlength="6" pattern="\d{6,}" />
+                                    <span id="password-error" style="color: red; display: none;">Passwords do not match</span>
+                                </div>
+                            </div>
+                            <div class="w3-submit mt-3 text-right">
+                                <button type="submit" class="btn btn-style btn-primary">Sign Up</button>
+                            </div>
+                        </form>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-arrow-up" aria-hidden="true"></span>
+    </button>
+
+
+
+
+
+    <script>
+        document.getElementById('cnic').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/[^0-9]/g, ''); // Remove all non-numeric characters
+            if (value.length > 5 && value.length <= 12) {
+                value = value.replace(/^(\d{5})(\d{0,7})/, '$1-$2');
+            } else if (value.length > 12) {
+                value = value.replace(/^(\d{5})(\d{7})(\d{0,1})/, '$1-$2-$3');
+            }
+            e.target.value = value;
+        });
+        </script>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+
+
+<script src="{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+
+
+<script src="{{ url_for('static', filename='assets/js/theme-change.js') }}"></script>
+
+    <script>
+
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#signupForm').submit(function (e) {
+                e.preventDefault();
+
+                var password = $('#password').val();
+                var confirmPassword = $('#confirmpassword').val();
+
+                if (password !== confirmPassword) {
+                    $('#password-error').css('display', 'block');
+                    return;
+                }
+
+                var formData = {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    cnic: $('#cnic').val(),
+                    password: password 
+                };
+
+                $.ajax({
+                    url: '/signupuser',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function (response) {
+                        console.log('Sign Up successful:', response);
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'You are Registered Successfully!',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed || result.isDismissed) {
+                                window.location.href = 'login';
+                            }
+                        });
+
+                        $('#signupForm')[0].reset();
+                    },
+                    error: function (error) {
+
+                        let errorMessage = JSON.parse(error.responseText).error;
+
+                        Swal.fire({
+                            title: 'Error!',
+                            text: errorMessage,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+
+
+                        console.log(errorMessage)
+
+
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+
+</body>
+
+</html>

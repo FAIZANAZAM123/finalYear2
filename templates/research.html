@@ -1,0 +1,390 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Poultry Vision</title>
+    <link href="//fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/style-starter.css') }}">
+
+</head>
+
+<body>
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand" href="/home">
+                        <span class="w3yellow">Poultry </span> Vision
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="research">Research</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <button id="logoutButton" class="btn mx-3 btn-danger">Logout</button>
+
+                </div>
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+  
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title mt-lg-5 mt-4">
+                            Research </h2>
+
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="/home">Home</a></li>
+                            <li class="active"><span class="fas fa-arrow-right mx-2"></span> Research </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <section class="w3l-index-about py-5" id="about2">
+        <div class="container py-md-5 py-2">
+            <div class="row">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="w3l-abouthny-img">
+                        <img src="{{ url_for('static', filename='assets/images/healthy.jpeg') }} " alt="" style="width: 100% !important; height: 300px;"
+                            class="img-fluid radius-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="w3l-abouthny-info">
+                        <h6 class="title-subw3hny"> </h6>
+                        <h3 class="title-w3l">Healthy </h3>
+                        <p class="mt-4">Ensuring poultry health is vital for productivity and bird well-being. Healthy birds are active, have clear eyes, smooth feathers, and clean droppings. Key to their health are proper nutrition, clean water, vaccinations, and good housing. Regular monitoring and timely veterinary care help maintain a thriving and productive flock.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="w3l-index-about py-5" id="about2">
+        <div class="container py-md-5 py-2">
+            <div class="row">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="w3l-abouthny-img">
+                        <img src="{{ url_for('static', filename='assets/images/salmo.jpeg') }}  " alt="" style="width: 100% !important; height: 300px;"
+                            class="img-fluid radius-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="w3l-abouthny-info">
+                        <h6 class="title-subw3hny"> </h6>
+                        <h3 class="title-w3l">Salmonella Disease </h3>
+                        <p class="mt-4">
+                            Salmonella diseases in poultry are caused by bacteria, leading to severe health issues like diarrhea, fever, and lethargy. Infected birds may exhibit symptoms such as reduced appetite, weakness, and white fecal matter. Preventing Salmonella involves maintaining good hygiene, proper sanitation, and regular health monitoring of the flock.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="w3l-index-about py-5" id="about2">
+        <div class="container py-md-5 py-2">
+            <div class="row">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="w3l-abouthny-img">
+                        <img src="{{ url_for('static', filename='assets/images/Cocci 1.jpg') }} 
+                        " alt="" style="width: 100% !important; height: 300px;"
+                            class="img-fluid radius-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="w3l-abouthny-info">
+                        <h6 class="title-subw3hny"> </h6>
+                        <h3 class="title-w3l">Cocci</h3>
+                        <p class="mt-4">Cocci is a deadly disease that hampers chicken's productivity and welfare. Thus,
+                            the disease is a major menace to the global poultry industry. Coccidiosis which is caused by
+                            the apicomplexan parasite of the genus Eimeria has seven known species which affect the
+                            different parts of the intestinal tract of chickens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w3l-index-about py-5" id="about2">
+        <div class="container py-md-5 py-2">
+            <div class="row">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="w3l-abouthny-img">
+                        <img src="{{ url_for('static', filename='assets/images/ncd.jpeg') }}" alt="" style="width: 100% !important; height: 300px;"
+                            class="img-fluid radius-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="w3l-abouthny-info">
+                        <h6 class="title-subw3hny"> </h6>
+                        <h3 class="title-w3l">Newcastle Disease
+                        </h3>
+                        <p class="mt-4">Newcastle disease is a highly contagious viral infection affecting poultry. It causes respiratory distress, nervous system disorders, and a significant drop in egg production. Symptoms include coughing, sneezing, twisted necks, and greenish diarrhea. Prevention involves strict biosecurity measures, regular vaccinations, and prompt isolation of affected birds to control outbreaks.
+
+                            .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="w3l-index-about py-5" id="about2">
+        <div class="container py-md-5 py-2">
+            <div class="row">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="w3l-abouthny-img">
+
+                        <img src="{{ url_for('static', filename='assets/images/white_diarrhea 1.jpg') }}" alt="" style="width: 100% !important; height: 300px;"
+                            class="img-fluid radius-image">
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5">
+                    <div class="w3l-abouthny-info">
+                        <h6 class="title-subw3hny"> </h6>
+                        <h3 class="title-w3l">White Diarrhea</h3>
+                        <p class="mt-4">White Diarrhea disease is caused by Salmonella enterica Pullorum and is
+                            characterized by very high mortality in young chickens and turkeys. Affected birds huddle
+                            near the heat source, are anorectic, weak, depressed, and have white fecal material pasted
+                            to the vent area.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="w3l-footer">
+        <div class="w3l-footer-16 py-5">
+            <div class="container py-md-5 py-3 pb-0">
+                <div class="row footer-p right-side">
+                    <div class="col-lg-4 col-md-6 pe-lg-5">
+                        <h2 class="footerw3l-logo"><a class="navbar-brand" href="/home">
+                                <span class="w3yellow">Poultry Vision</span>
+                            </a></h2>
+                        <p class="mt-3">Our poultry disease detection system utilizes advanced algorithms to analyze
+                            various health parameters, promptly identifying potential issues. Through continuous
+                            monitoring, we aim to provide you with a proactive approach to poultry health management.
+                        </p>
+
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                        <div class="row">
+                            <div class="col-xl-5 col-6 column">
+                                <h3>Links</h3>
+                                <ul class="footer-gd-16">
+                                    <li><a href="about.html">About Us</a></li>
+
+                                    <li><a href="about.html">Team</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 column mt-lg-0 mt-4 pl-xl-0">
+                        <h3>Instagram Feed</h3>
+                        <div class="end-column row">
+                            <div class="col-4 w3indta-grid">
+                                <a href="#insta">
+                                    <img src="{{ url_for('static', filename='assets/images/g1.jpg') }}" class="img-fluid radius-image" alt="poultryfield">
+                                </a>
+                            </div>
+                            <div class="col-4 w3indta-grid">
+                                <a href="#insta">
+                                    <img src="{{ url_for('static', filename='assets/images/g2.jpg') }}" class="img-fluid radius-image" alt="poultryfield">
+                                </a>
+                            </div>
+                            <div class="col-4 w3indta-grid">
+                                <a href="#insta">
+                                    <img src="{{ url_for('static', filename='assets/images/g3.jpg') }}" class="img-fluid radius-image" alt="poultryfield">
+                                </a>
+                            </div>
+                            <div class="col-4 w3indta-grid mt-4">
+                                <a href="#insta">
+                                    <img src="{{ url_for('static', filename='assets/images/g4.jpg') }}" class="img-fluid radius-image" alt="poultryfield">
+                                </a>
+                            </div>
+                            <div class="col-4 w3indta-grid mt-4">
+                                <a href="#insta">
+                                    <img src="{{ url_for('static', filename='assets/images/g5.jpg') }}" class="img-fluid radius-image" alt="poultryfield">
+                                </a>
+                            </div>
+                            <div class="col-4 w3indta-grid mt-4">
+                                <a href="#insta">
+                                    <img src="{{ url_for('static', filename='assets/images/g6.jpg') }}" class="img-fluid radius-image" alt="poultryfield">
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="below-section text-center pt-lg-4 mt-5">
+                    <p class="copy-text">&copy; 2024 All rights reserved by Poultry Vision
+                    </p>
+                    <ul class="footer-gd-16 d-flex justify-content-center">
+                        <li><a href="#terms">Terms
+                            </a></li>
+                        <li class="mx-2">/
+                        </li>
+                        <li><a href="#policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-arrow-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+   
+   <script src="{{ url_for('static', filename='assets/js/jquery-3.3.1.min.js') }}"></script>
+
+
+   <script src="{{ url_for('static', filename='assets/js/theme-change.js') }}"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+  
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+
+
+<script>
+    $(document).ready(function () {
+        $('#logoutButton').click(function () {
+            $.ajax({
+                url: '/logout',
+                type: 'GET',
+                success: function (response) {
+                    console.log('Logout successful');
+                    // Redirect to login page after logout
+                    window.location.href = 'login';
+                },
+                error: function (error) {
+                    console.error('Logout failed', error);
+                    // Optionally handle logout failure
+                }
+            });
+        });
+    });
+</script>
+
+
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+
+</body>
+
+</html>
