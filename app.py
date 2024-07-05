@@ -4,10 +4,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_pymongo import PyMongo
 from flask_session import Session
 from functools import wraps
-from keras.models import load_model
-from PIL import Image
-import numpy as np
-import cv2
+# from keras.models import load_model
+# from PIL import Image
+# import numpy as np
+# import cv2
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads/'
@@ -23,22 +23,22 @@ mongodb_client = PyMongo(app)
 db = mongodb_client.db
 
 # Load your model using an absolute path
-model_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'Save-models', 'final.h5')
-model = load_model(model_path)
-classes = ['NCD', 'Cocci', 'SALMO', 'white_diarrhea', 'HEALTHY']
+# model_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'Save-models', 'final.h5')
+# model = load_model(model_path)
+# classes = ['NCD', 'Cocci', 'SALMO', 'white_diarrhea', 'HEALTHY']
 
-def preprocess_image(image_path):
-    img = cv2.imread(image_path)
-    img_resized = cv2.resize(img, (150, 150))
-    img_normalized = img_resized / 255.0
-    img_expanded = np.expand_dims(img_normalized, axis=0)
-    return img_expanded
+# def preprocess_image(image_path):
+#     img = cv2.imread(image_path)
+#     img_resized = cv2.resize(img, (150, 150))
+#     img_normalized = img_resized / 255.0
+#     img_expanded = np.expand_dims(img_normalized, axis=0)
+#     return img_expanded
 
-def predict_image(image_path):
-    image = preprocess_image(image_path)
-    predictions = model.predict(image)
-    predicted_class = np.argmax(predictions, axis=1)[0]
-    return classes[predicted_class]
+# def predict_image(image_path):
+#     image = preprocess_image(image_path)
+#     predictions = model.predict(image)
+#     predicted_class = np.argmax(predictions, axis=1)[0]
+#     return classes[predicted_class]
 
 def login_required(f):
     @wraps(f)
@@ -48,22 +48,22 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-@app.route('/upload', methods=['POST'])
-def upload_file():
-    if request.method == 'POST':
-        file = request.files['file']
-        if file:
-            file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-            file.save(file_path)
-            prediction = predict_image(file_path)
-            return redirect(url_for('result', prediction=prediction, file_name=file.filename))
-    return 'Failed to upload file'
+# @app.route('/upload', methods=['POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         file = request.files['file']
+#         if file:
+#             file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+#             file.save(file_path)
+#             prediction = predict_image(file_path)
+#             return redirect(url_for('result', prediction=prediction, file_name=file.filename))
+#     return 'Failed to upload file'
 
-@app.route('/result')
-def result():
-    prediction = request.args.get('prediction')
-    file_name = request.args.get('file_name')
-    return render_template('result.html', prediction=prediction, file_name=file_name)
+# @app.route('/result')
+# def result():
+#     prediction = request.args.get('prediction')
+#     file_name = request.args.get('file_name')
+#     return render_template('result.html', prediction=prediction, file_name=file_name)
     
 @app.route('/home')
 @login_required
