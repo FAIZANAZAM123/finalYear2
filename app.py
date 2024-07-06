@@ -40,13 +40,13 @@ db = mongodb_client.db
 #     predicted_class = np.argmax(predictions, axis=1)[0]
 #     return classes[predicted_class]
 
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if 'user_id' not in session:
-            return redirect(url_for('login'))
-        return f(*args, **kwargs)
-    return decorated_function
+# def login_required(f):
+#     @wraps(f)
+#     def decorated_function(*args, **kwargs):
+#         if 'user_id' not in session:
+#             return redirect(url_for('login'))
+#         return f(*args, **kwargs)
+#     return decorated_function
 
 # @app.route('/upload', methods=['POST'])
 # def upload_file():
@@ -66,22 +66,22 @@ def login_required(f):
 #     return render_template('result.html', prediction=prediction, file_name=file_name)
     
 @app.route('/home')
-@login_required
+# @login_required
 def index():
     return render_template('index.html')
 
 @app.route('/about')
-@login_required
+# @login_required
 def about():
     return render_template('about.html')
 
 @app.route('/research')
-@login_required
+# @login_required
 def research():
     return render_template('Research.html')
 
 @app.route('/contact')
-@login_required
+# @login_required
 def contact():
     return render_template('contact.html')
 
