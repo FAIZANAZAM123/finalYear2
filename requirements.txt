@@ -2,4 +2,5 @@ Flask
 Werkzeug
 flask-pymongo
 flask-session
+
 pillow
