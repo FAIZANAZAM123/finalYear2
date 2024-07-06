@@ -9,7 +9,6 @@
     <link href="//fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
     <!--//google-fonts -->
     <!--/Template-CSS -->
-    <link rel="stylesheet" href="assets/css/style-starter.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/style-starter.css') }}">
 
@@ -165,6 +164,12 @@
 
 
 
+
+
+<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+
+
+
     <script>
         $(document).ready(function () {
             $('#signinForm').submit(function (e) {
@@ -207,12 +212,6 @@
             });
         });
     </script>
-
-
-<script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
-
-
-
 
 </body>
 
